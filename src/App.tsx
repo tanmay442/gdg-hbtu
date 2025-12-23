@@ -10,6 +10,7 @@ import Footer from './components/footer';
 
 import { AboutSection } from './components/about';
 import { NowSection } from './components/now';
+import { MediaSection } from './components/media';
 
 const App = () => {
   return (
@@ -51,6 +52,9 @@ const App = () => {
         </div>
         <div>
           <NowSection />
+        </div>
+        <div>
+          <MediaSection />
         </div>
 
       </div>
