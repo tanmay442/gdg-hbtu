@@ -1,13 +1,19 @@
 import React from 'react';
 import StarBorder from './StarBorder/StarBorder';
 import { GOOGLE_COLORS } from '/src/data/constants';
-
+import GradientText from './GradientText/GradientText';
 const HeroSection = () => {
   return (
-    <div style={{ flex: '1 1 500px', zIndex: 10 }}>
-      <p style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#ccc' }}>
-        Welcome Harcourtians 
-      </p>
+    <div style={{ flex: '1 1 500px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+     
+      <div marginBottom="1rem" style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>  
+        <GradientText
+        colors={[GOOGLE_COLORS.blue, GOOGLE_COLORS.red, GOOGLE_COLORS.yellow, GOOGLE_COLORS.green ]}
+        animationSpeed={100}>
+          Welcome Harcourtians 
+          
+        </GradientText>
+      </div>
 
       <div style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', lineHeight: 1.1, display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
         <span style={{ color: GOOGLE_COLORS.red, marginRight: '5px' }}>&lt;</span>
