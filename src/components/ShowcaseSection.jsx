@@ -23,7 +23,7 @@ const ShowcaseSection = ({ colors }) => {
         <div style={{ flex: '1 1 400px', height: '600px', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' }}>
             <div style={{ position: 'absolute', width: '450px', height: '450px', background: `radial-gradient(circle, rgba(66, 133, 244, 0.12) 0%, rgba(0,0,0,0) 70%)`, borderRadius: '50%', zIndex: 0 }}></div>
 
-            <CardSwap cardDistance={40} verticalDistance={60} delay={3500} pauseOnHover={true}>
+            <CardSwap cardDistance={40} verticalDistance={60} delay={5000} pauseOnHover={true}>
                 <Card>
                     <div style={cardStyle(colors.green, 'linear-gradient(135deg, #1e1e1e 0%, #0d1f12 100%)')}>
                         <div style={iconStyle(colors.green)}><span style={{ fontSize: '20px' }}>🌱</span></div>

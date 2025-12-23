@@ -8,6 +8,9 @@ import Particles from './components/particleBackground/Particles';
 import { NAV_ITEMS, GOOGLE_COLORS } from './data/constants';
 import Footer from './components/footer';
 
+import { AboutSection } from './components/about';
+import { NowSection } from './components/now';
+
 const App = () => {
   return (
     <div className="app-container">
@@ -44,11 +47,15 @@ const App = () => {
         </div>
 
         <div>
-
+          <AboutSection />
         </div>
+        <div>
+          <NowSection />
+        </div>
+
       </div>
-        <Footer />
-      </div>
+      <Footer />
+    </div>
   );
 };
 
