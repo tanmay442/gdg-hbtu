@@ -1,0 +1,50 @@
+import React from 'react';
+import './App.css';
+import CardNav from './components/CardNav/CardNav';
+import HeroSection from './components/HeroSection';
+import ShowcaseSection from './components/ShowcaseSection';
+import logo from '/public/logo.svg';
+import Particles from './components/particleBackground/Particles';
+import { NAV_ITEMS, GOOGLE_COLORS } from './data/constants';
+
+const App = () => {
+  return (
+    <div className="app-container">
+
+      <div className="particles-layer">
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+
+      <div className="main-content">
+
+        <CardNav
+          logo={logo}
+          logoAlt="GDG HBTU Logo"
+          items={NAV_ITEMS}
+          baseColor="#7e797954"
+          menuColor="#000"
+          buttonBgColor="#111"
+          buttonTextColor="#fff"
+          ease="power3.out"
+        />
+
+        <div className="hero-layout">
+          <HeroSection colors={GOOGLE_COLORS} />
+          <ShowcaseSection colors={GOOGLE_COLORS} />
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default App;
