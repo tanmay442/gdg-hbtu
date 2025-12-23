@@ -6,6 +6,7 @@ import ShowcaseSection from './components/ShowcaseSection';
 import logo from '/public/logo.svg';
 import Particles from './components/particleBackground/Particles';
 import { NAV_ITEMS, GOOGLE_COLORS } from './data/constants';
+import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
           logo={logo}
           logoAlt="GDG HBTU Logo"
           items={NAV_ITEMS}
-          baseColor="#7e797954"
+          baseColor="#6f6d6d54"
           menuColor="#000"
           buttonBgColor="#111"
           buttonTextColor="#fff"
@@ -42,8 +43,12 @@ const App = () => {
           <ShowcaseSection colors={GOOGLE_COLORS} />
         </div>
 
+        <div>
+
+        </div>
       </div>
-    </div>
+        <Footer />
+      </div>
   );
 };
 
