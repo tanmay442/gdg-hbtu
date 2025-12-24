@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import CardSwap, { Card } from './CardSwap/CardSwap';
 
-const ShowcaseSection = ({ colors }) => {
+interface ShowcaseSectionProps {
+    colors: {
+        blue: string;
+        red: string;
+        yellow: string;
+        green: string;
+        darkBg?: string; // Optional as it might be in the object
+    };
+}
 
-    const cardStyle = (borderColor, gradient) => ({
+const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
+
+    const cardStyle = (borderColor: string, gradient: string): CSSProperties => ({
         width: '100%',
         height: '100%',
         background: gradient,
@@ -19,7 +29,7 @@ const ShowcaseSection = ({ colors }) => {
         position: 'relative'
     });
 
-    const imageContainerStyle = {
+    const imageContainerStyle: CSSProperties = {
         flex: 1,
         minHeight: 0,
         display: 'flex',
@@ -29,7 +39,7 @@ const ShowcaseSection = ({ colors }) => {
         overflow: 'hidden'
     };
 
-    const imageStyle = {
+    const imageStyle: CSSProperties = {
         maxWidth: '100%',
         maxHeight: '100%',
         objectFit: 'contain',
