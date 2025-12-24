@@ -1,6 +1,6 @@
 import React from 'react';
 import StarBorder from './StarBorder/StarBorder';
-import { GOOGLE_COLORS } from '/src/data/constants';
+import { GOOGLE_COLORS } from '../data/constants';
 import GradientText from './GradientText/GradientText';
 
 interface HeroSectionProps {
