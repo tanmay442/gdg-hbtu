@@ -8,12 +8,14 @@ This website serves as the digital home for GDG HBTU, providing information abou
 
 ## ✨ Key Features
 
+- **Mobile-First Responsive Design**: Fully optimized for mobile devices with adaptive layouts
 - **Interactive Particle Background**: Dynamic particle system that responds to user interactions
 - **Smooth Animations**: GSAP-powered animations with Lenis smooth scrolling
-- **Responsive Design**: Fully responsive layout optimized for all devices
-- **Event Showcase**: Dynamic event listings with ChromaGrid layout
-- **Team Profiles**: Beautiful team member cards with orbiting animations
+- **Responsive Design**: Fully responsive layout optimized for all devices (mobile, tablet, desktop)
+- **Event Showcase**: Dynamic event listings with responsive card layout (ChromaGrid on desktop, vertical cards on mobile)
+- **Team Profiles**: Beautiful team member cards in responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
 - **Google Branding**: Consistent Google Developer Groups color scheme and branding
+- **Mobile Optimizations**: Simplified layouts on mobile - hidden complex animations, reduced media gallery items, optimized spacing
 
 ## 🛠️ Tech Stack
 
