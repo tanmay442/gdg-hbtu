@@ -9,8 +9,8 @@ const NavBar = () => {
             bgColor: "rgba(66, 133, 244, 0.9)",
             textColor: "#fff",
             links: [
-                { label: "About Us", href: "#AboutSection", ariaLabel: "Go to About Section" },
-                { label: "Now", href: "#NowSection", ariaLabel: "Go to Now Section" },
+                { label: "About Us", href: "/#AboutSection", ariaLabel: "Go to About Section" },
+                { label: "Now", href: "/#NowSection", ariaLabel: "Go to Now Section" },
                 { label: "Our Team", href: "/team", target: "_blank", ariaLabel: "Meet the Team" }
             ]
         },
@@ -20,7 +20,7 @@ const NavBar = () => {
             textColor: "#fff",
             links: [
                 { label: "All Events", href: "/events", target: "_blank", ariaLabel: "GDG HBTU" },
-                { label: "Media & Gallery", href: "#MediaSection", ariaLabel: "View Events" }
+                { label: "Media & Gallery", href: "/#MediaSection", ariaLabel: "View Events" }
             ]
         },
         {
