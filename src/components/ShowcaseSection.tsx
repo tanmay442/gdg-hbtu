@@ -1,4 +1,5 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
+import type { CSSProperties } from 'react';
 import CardSwap, { Card } from './CardSwap/CardSwap';
 
 interface ShowcaseSectionProps {
@@ -7,7 +8,7 @@ interface ShowcaseSectionProps {
         red: string;
         yellow: string;
         green: string;
-        darkBg?: string; // Optional as it might be in the object
+        darkBg?: string;
     };
 }
 

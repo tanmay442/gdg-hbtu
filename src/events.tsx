@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
-import NavBar from '/src/components/NavBar';
-import Footer from '/src/components/footer';
-import Particles from '/src/components/particleBackground/Particles';
-import ChromaGrid from '/src/components/ChromaGrid/ChromaGrid';
-import eventsData from '/src/data/eventdata.json';
+import NavBar from './components/NavBar';
+import Footer from './components/footer';
+import Particles from './components/particleBackground/Particles';
+import ChromaGrid from './components/ChromaGrid/ChromaGrid';
+import eventsData from './data/eventdata.json';
 import { GOOGLE_COLORS } from './data/constants';
 
 const EventsPage = () => {

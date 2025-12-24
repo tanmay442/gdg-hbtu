@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import NavBar from '/src/components/NavBar';
-import Footer from '/src/components/footer';
-import Particles from '/src/components/particleBackground/Particles';
-import ChromaGrid from '/src/components/ChromaGrid/ChromaGrid';
+import NavBar from './components/NavBar';
+import Footer from './components/footer';
+import Particles from './components/particleBackground/Particles';
+import ChromaGrid from './components/ChromaGrid/ChromaGrid';
 import teamData from './data/team.json';
 
 interface TeamMember {
