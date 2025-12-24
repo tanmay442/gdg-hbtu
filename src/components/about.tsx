@@ -7,7 +7,14 @@ export function AboutSection() {
     return (
         <section id="about" className="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-16 md:flex-row md:px-16 md:py-24">
 
-            <div className="relative flex h-[500px] w-full flex-col items-center justify-center md:w-1/2 scale-90 md:scale-100">
+            <div className="orbiting-circles-container relative flex h-[500px] w-full flex-col items-center justify-center md:w-1/2 scale-90 md:scale-100">
+                <style>{`
+                    @media (max-width: 768px) {
+                        .orbiting-circles-container {
+                            display: none !important;
+                        }
+                    }
+                `}</style>
 
                 <div className="pointer-events-none absolute z-10 select-none flex items-center justify-center">
                     <span className="text-8xl font-black text-white/5 tracking-tighter">GDG</span>

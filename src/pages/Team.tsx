@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/footer';
 import Particles from '../components/particleBackground/Particles';
-import ChromaGrid from '../components/ChromaGrid/ChromaGrid';
 import teamData from '../data/team.json';
 
 interface TeamMember {
@@ -99,36 +98,110 @@ const TeamPage: React.FC = () => {
                     style={{
                         textAlign: 'center',
                         marginTop: '120px',
-                        marginBottom: '30px'
+                        marginBottom: '40px',
+                        padding: '0 20px'
                     }}
                 >
-                    <h1 style={{ color: '#fff', fontSize: '3rem', fontWeight: 'bold' }}>
+                    <h1 style={{ color: '#fff', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
                         Meet the Team
                     </h1>
-                    <p style={{ color: '#aaa', fontSize: '1.1rem' }}>
+                    <p style={{ color: '#aaa', fontSize: 'clamp(0.9rem, 2vw, 1.1rem)' }}>
                         The minds behind GDG HBTU
                     </p>
                 </div>
 
-                {/* GRID */}
+                {/* TEAM GRID */}
                 <div
+                    className="team-grid"
                     style={{
-                        height: '1600px',
-                        width: '100%',
-                        maxWidth: '1600px',
+                        padding: '0 20px 40px 20px',
+                        maxWidth: '1200px',
                         margin: '0 auto',
-                        position: 'relative',
-                        isolation: 'isolate',
-                        overflow: 'hidden'
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: '24px'
                     }}
                 >
-                    <ChromaGrid
-                        items={chromaItems}
-                        radius={280}
-                        damping={0.45}
-                        fadeOut={0.25}   // ✅ FIXED
-                        ease="power3.out"
-                    />
+                    <style>{`
+                        @media (min-width: 769px) and (max-width: 1024px) {
+                            .team-grid {
+                                grid-template-columns: repeat(2, 1fr) !important;
+                            }
+                        }
+                        @media (min-width: 1025px) {
+                            .team-grid {
+                                grid-template-columns: repeat(3, 1fr) !important;
+                            }
+                        }
+                    `}</style>
+                    {chromaItems.map((item, index) => (
+                        <a
+                            key={index}
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <div style={{
+                                background: item.gradient,
+                                border: `2px solid ${item.borderColor}`,
+                                borderRadius: '16px',
+                                padding: '24px',
+                                transition: 'transform 0.3s ease',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                textAlign: 'center',
+                                height: '100%'
+                            }}
+                                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
+                                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                            >
+                                <div style={{
+                                    width: '120px',
+                                    height: '120px',
+                                    marginBottom: '16px',
+                                    borderRadius: '50%',
+                                    overflow: 'hidden',
+                                    background: '#1a1a1a',
+                                    border: `3px solid ${item.borderColor}`
+                                }}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover'
+                                        }}
+                                    />
+                                </div>
+                                <h3 style={{
+                                    color: '#fff',
+                                    fontSize: '1.25rem',
+                                    fontWeight: 'bold',
+                                    margin: '0 0 8px 0'
+                                }}>
+                                    {item.title}
+                                </h3>
+                                <p style={{
+                                    color: '#aaa',
+                                    fontSize: '0.9rem',
+                                    margin: '0 0 4px 0'
+                                }}>
+                                    {item.subtitle}
+                                </p>
+                                <p style={{
+                                    color: '#666',
+                                    fontSize: '0.85rem',
+                                    margin: 0
+                                }}>
+                                    {item.handle}
+                                </p>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
 

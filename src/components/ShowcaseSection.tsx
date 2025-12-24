@@ -48,7 +48,25 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
     };
 
     return (
-        <div style={{ flex: '1 1 400px', height: '600px', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' }}>
+        <div
+            className="showcase-section"
+            style={{
+                flex: '1 1 400px',
+                height: '600px',
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '-100px'
+            }}
+        >
+            <style>{`
+                @media (max-width: 768px) {
+                    .showcase-section {
+                        display: none !important;
+                    }
+                }
+            `}</style>
             <div style={{ position: 'absolute', width: '450px', height: '450px', background: `radial-gradient(circle, rgba(66, 133, 244, 0.12) 0%, rgba(0,0,0,0) 70%)`, borderRadius: '50%', zIndex: 0 }}></div>
 
             <CardSwap cardDistance={40} verticalDistance={60} delay={5000} pauseOnHover={true}>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Masonry from './Masonry/Masonry';
 import { GOOGLE_COLORS } from '../data/constants';
 
@@ -12,6 +13,22 @@ const items = [
 ];
 
 export function MediaSection() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
+    // Show only 4 items on mobile, all items on desktop
+    const displayItems = isMobile ? items.slice(0, 4) : items;
+
     return (
         <section id="media" className="relative w-full overflow-hidden px-4 py-16 md:px-16 md:py-24 mb-24">
             <div className="flex w-full flex-col justify-center text-left max-w-7xl mx-auto z-10">
@@ -31,7 +48,7 @@ export function MediaSection() {
                 </div>
 
                 <Masonry
-                    items={items}
+                    items={displayItems}
                     ease="power3.out"
                     duration={0.6}
                     stagger={0.05}
