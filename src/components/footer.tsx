@@ -49,7 +49,7 @@ const footerData: FooterSection[] = [
     links: [
       { label: 'Reach Us', href: 'https://example.com/contact' },
       { label: 'Developers', href: 'https://example.com/developers' },
-      { label: 'gdghbtu@mes.ac.in', href: 'mailto:gdghbtu@mes.ac.in' },
+      { label: 'gdghbtu@hbtu.ac.in', href: 'mailto:gdghbtu@hbtu.ac.in' },
     ],
   },
 ];
@@ -63,14 +63,14 @@ const Footer: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 mb-16">
 
           {/* Left Column: Hero Text & CTA */}
-            <div className="lg:w-1/3 flex flex-col items-start">
-              <h5 className="text-sm md:text-base font-normal leading-tight mb-8 text-lg md:text-xl">
+          <div className="lg:w-1/3 flex flex-col items-start">
+            <h5 className="text-sm md:text-base font-normal leading-tight mb-8 text-lg md:text-xl">
               GDG On Campus HBTU is a student-led community that empowers students to learn, share knowledge, and build projects using Google technologies.
-              </h5>
-              <button className="border border-white/20 hover:bg-white/10 text-white px-7 py-2.5 rounded-full transition-colors duration-300">
+            </h5>
+            <button className="border border-white/20 hover:bg-white/10 text-white px-7 py-2.5 rounded-full transition-colors duration-300">
               <a href="https://example.com/" className="text-white no-underline">Join Us and Learn</a>
-              </button>
-            </div>
+            </button>
+          </div>
 
           {/* Right Column: Navigation Links */}
           <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
         {/* Bottom Section: Copyright & Socials */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-gray-400 text-center md:text-left">
-            Google Developer Groups On Campus • Harcourt Butler Technical University, Kanpur 
+            Google Developer Groups On Campus • Harcourt Butler Technical University, Kanpur
           </p>
 
           <div className="flex space-x-4">
