@@ -173,13 +173,16 @@ const CardNav: React.FC<CardNavProps> = ({
           </div>
 
           <div className="logo-container">
-            <img src={logo} alt={logoAlt} className="logo" />
+            <a href="/" className="logo-link">
+              <img src={logo} alt={logoAlt} className="logo" />
+            </a>
           </div>
 
           <button
             type="button"
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+            onClick={() => window.location.href = 'https://gdg.community.dev/gdg-on-campus-harcourt-butler-technical-university-kanpur-india/'}
           >
             Get Started
           </button>

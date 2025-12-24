@@ -59,7 +59,7 @@ export function NowSection() {
                     </div>
 
                     <div className="w-full md:w-auto flex justify-start md:justify-end mt-4 md:mt-0">
-                        <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="no-underline">
+                        <a href="/events" target="_blank" rel="noopener noreferrer" className="no-underline">
                             <StarBorder as="button" color={GOOGLE_COLORS.blue} speed="5s" className="text-white">
                                 Events
                             </StarBorder>

@@ -32,7 +32,11 @@ export const NAV_ITEMS = [
     links: [
       { label: "Email", ariaLabel: "Email us" },
       { label: "Twitter", ariaLabel: "Twitter" },
-      { label: "LinkedIn", ariaLabel: "LinkedIn" }
+      { label: "LinkedIn", ariaLabel: "LinkedIn" },
+      { label: 'Home', href: '#Home' },
+      { label: 'About', href: '#AboutSection' },
+      { label: 'Now', href: '#NowSection' },
+      { label: 'Media', href: '#MediaSection' },
     ]
   }
 ];

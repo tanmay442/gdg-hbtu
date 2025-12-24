@@ -57,7 +57,7 @@ const ShowcaseSection = ({ colors }) => {
                 <Card>
                     <div style={cardStyle(colors.red, 'linear-gradient(135deg, #1e1e1e 0%, #2a1010 100%)')}>
                         <div style={imageContainerStyle}>
-                            <img src="/src/assets/image.webp" alt="Dev Fests" style={imageStyle} />
+                            <img src="/src/assets/image.png" alt="Dev Fests" style={imageStyle} />
                         </div>
                         <div>
                             <h3 style={{ color: '#fff', margin: '0 0 5px 0', fontSize: '1.5rem' }}>Dev Fests</h3>

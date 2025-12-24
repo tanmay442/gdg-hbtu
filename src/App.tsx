@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import CardNav from './components/CardNav/CardNav';
+import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import ShowcaseSection from './components/ShowcaseSection';
-import logo from '/public/logo.svg';
 import Particles from './components/particleBackground/Particles';
-import { NAV_ITEMS, GOOGLE_COLORS } from './data/constants';
+import { GOOGLE_COLORS } from './data/constants';
 import Footer from './components/footer';
 
 import { AboutSection } from './components/about';
@@ -13,6 +12,20 @@ import { NowSection } from './components/now';
 import { MediaSection } from './components/media';
 
 const App = () => {
+
+  useEffect(() => {
+    const { hash } = window.location;
+
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <div className="app-container">
 
@@ -31,29 +44,22 @@ const App = () => {
 
       <div className="main-content">
 
-        <CardNav
-          logo={logo}
-          logoAlt="GDG HBTU Logo"
-          items={NAV_ITEMS}
-          baseColor="#6f6d6d54"
-          menuColor="#000"
-          buttonBgColor="#111"
-          buttonTextColor="#fff"
-          ease="power3.out"
-        />
+        <NavBar />
 
-        <div className="hero-layout">
+        <div id="Home" className="hero-layout">
           <HeroSection colors={GOOGLE_COLORS} />
           <ShowcaseSection colors={GOOGLE_COLORS} />
         </div>
 
-        <div>
+        <div id="AboutSection">
           <AboutSection />
         </div>
-        <div>
+
+        <div id="NowSection">
           <NowSection />
         </div>
-        <div>
+
+        <div id="MediaSection">
           <MediaSection />
         </div>
 

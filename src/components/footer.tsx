@@ -20,36 +20,30 @@ const footerData: FooterSection[] = [
     title: 'About',
     underlineColor: 'bg-yellow-400', // Google Yellow
     links: [
-      { label: 'Vision', href: 'https://example.com/vision' },
-      { label: 'Google Technologies', href: 'https://example.com/technologies' },
-      { label: 'FAQs', href: 'https://example.com/faqs' },
+      { label: 'About Us', href: '#AboutSection' },
+      { label: 'HBTU', href: 'https://hbtu.ac.in/' },
     ],
   },
   {
     title: 'Events',
     underlineColor: 'bg-green-500', // Google Green
     links: [
-      { label: 'Upcoming Events', href: 'https://example.com/events' },
-      { label: 'Previous Events', href: 'https://example.com/past-events' },
-      { label: 'Timeline', href: 'https://example.com/timeline' },
+      //{ label: 'Upcoming Events', href: '/events' }, //idk what to put here lmao
+      { label: 'Past Events', href: '/events' },
     ],
   },
   {
     title: 'Team',
     underlineColor: 'bg-red-500', // Google Red
     links: [
-      { label: 'Faculty', href: 'https://example.com/faculty' },
-      { label: 'Core Team', href: 'https://example.com/core-team' },
-      { label: 'Members', href: 'https://example.com/members' },
+      { label: 'Our Team', href: 'https://example.com/core-team' },
     ],
   },
   {
     title: 'Contact',
     underlineColor: 'bg-blue-500', // Google Blue
     links: [
-      { label: 'Reach Us', href: 'https://example.com/contact' },
-      { label: 'Developers', href: 'https://example.com/developers' },
-      { label: 'gdghbtu@hbtu.ac.in', href: 'mailto:gdghbtu@hbtu.ac.in' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/company/gdghbtu/' },
     ],
   },
 ];
@@ -68,7 +62,7 @@ const Footer: React.FC = () => {
               GDG On Campus HBTU is a student-led community that empowers students to learn, share knowledge, and build projects using Google technologies.
             </h5>
             <button className="border border-white/20 hover:bg-white/10 text-white px-7 py-2.5 rounded-full transition-colors duration-300">
-              <a href="https://example.com/" className="text-white no-underline">Join Us and Learn</a>
+              <a href="https://gdg.community.dev/gdg-on-campus-harcourt-butler-technical-university-kanpur-india/" className="text-white no-underline">Join Us and Learn</a>
             </button>
           </div>
 
@@ -107,9 +101,8 @@ const Footer: React.FC = () => {
           </p>
 
           <div className="flex space-x-4">
-            <SocialIcon href="https://example.com/linkedin" icon={<LinkedInIcon />} />
-            <SocialIcon href="https://example.com/github" icon={<GithubIcon />} />
-            <SocialIcon href="https://example.com/instagram" icon={<InstagramIcon />} />
+            <SocialIcon href="https://www.linkedin.com/company/gdghbtu/" icon={<LinkedInIcon />} />
+            <SocialIcon href="https://github.com/tanmay442/gdg-hbtu" icon={<GithubIcon />} />
           </div>
         </div>
       </div>

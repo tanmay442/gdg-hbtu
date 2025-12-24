@@ -1,0 +1,164 @@
+{
+  "events": [
+    {
+      "id": "evt-2025-11-14-kodeklash",
+      "title": "KodeKlash'25 – A National Level Hackathon!",
+      "type": "Hackathon",
+      "date": "2025-11-14",
+      "category": "Programming / Development",
+      "image": "src/assets/blob_qoNbrVn.webp",
+      "description": "National-level hackathon organized by GDG on Campus HBTU.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "https://kodekalesh-2025.devfolio.co/"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-05-ui-mayhem",
+      "title": "UI Mayhem",
+      "type": "Competition",
+      "date": "2025-11-05",
+      "category": "UI/UX",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "UI-focused hackathon emphasizing design and user experience.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Submission form",
+          "href": "https://forms.gle/BPZaZ1i2huzAkYqm9"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-10-15-unlocking-lightning",
+      "title": "Unlocking Lightning'25 – Insights for the Future",
+      "type": "Info Session",
+      "date": "2025-10-15",
+      "category": "Technology Awareness",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Informational session focused on future tech insights.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-05-20-tech-talk",
+      "title": "Wrap-up Event – Speaker Session / Tech Talk",
+      "type": "Tech Talk",
+      "date": "2025-05-20",
+      "category": "Knowledge Sharing",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Speaker session concluding an event series.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-02-22-techathon-2",
+      "title": "Techathon 2.0",
+      "type": "Hackathon",
+      "date": "2025-02-22",
+      "category": "Software Development",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Second edition of the Techathon hackathon.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2024-12-30-tech-winter-break",
+      "title": "Tech Winter Break – GDG on Campus Harcourt Butler Technical University",
+      "type": "Workshop / Study Group",
+      "date": "2024-12-30",
+      "category": "Learning & Collaboration",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Winter study group and collaborative learning event.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2024-11-12-protocol-py",
+      "title": "Protocol-Py",
+      "type": "Workshop / Study Group",
+      "date": "2024-11-12",
+      "category": "Python / Backend",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Python-focused workshop under GDG on Campus HBTU.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2024-10-05-mini-hackathon",
+      "title": "Mini Hackathon",
+      "type": "Hackathon",
+      "date": "2024-10-05",
+      "category": "Rapid Prototyping",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Compact hackathon designed for fast-paced innovation.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2024-10-05-build-with-ai",
+      "title": "Build With AI – Workshop",
+      "type": "Workshop / Study Group",
+      "date": "2024-10-05",
+      "category": "Artificial Intelligence",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "AI-focused hands-on workshop.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "evt-2024-09-14-club-info-session",
+      "title": "Club Info Session and Expectations for 2024–25",
+      "type": "Info Session",
+      "date": "2024-09-14",
+      "category": "Community Orientation",
+      "image": "src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "description": "Introduction to club activities and expectations for the academic year.",
+      "status": "past",
+      "links": [
+        {
+          "label": "Event Page",
+          "href": "#"
+        }
+      ]
+    }
+  ]
+}
