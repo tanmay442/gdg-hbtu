@@ -6,7 +6,7 @@
       "type": "Hackathon",
       "date": "2025-11-14",
       "category": "Programming / Development",
-      "image": "/public/blob_qoNbrVn.webp",
+      "image": "blob_qoNbrVn.webp",
       "description": "National-level hackathon organized by GDG on Campus HBTU.",
       "status": "past",
       "links": [
@@ -22,7 +22,7 @@
       "type": "Competition",
       "date": "2025-11-05",
       "category": "UI/UX",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "UI-focused hackathon emphasizing design and user experience.",
       "status": "past",
       "links": [
@@ -38,7 +38,7 @@
       "type": "Info Session",
       "date": "2025-10-15",
       "category": "Technology Awareness",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Informational session focused on future tech insights.",
       "status": "past",
       "links": [
@@ -54,7 +54,7 @@
       "type": "Tech Talk",
       "date": "2025-05-20",
       "category": "Knowledge Sharing",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Speaker session concluding an event series.",
       "status": "past",
       "links": [
@@ -70,7 +70,7 @@
       "type": "Hackathon",
       "date": "2025-02-22",
       "category": "Software Development",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Second edition of the Techathon hackathon.",
       "status": "past",
       "links": [
@@ -86,7 +86,7 @@
       "type": "Workshop / Study Group",
       "date": "2024-12-30",
       "category": "Learning & Collaboration",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Winter study group and collaborative learning event.",
       "status": "past",
       "links": [
@@ -102,7 +102,7 @@
       "type": "Workshop / Study Group",
       "date": "2024-11-12",
       "category": "Python / Backend",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Python-focused workshop under GDG on Campus HBTU.",
       "status": "past",
       "links": [
@@ -118,7 +118,7 @@
       "type": "Hackathon",
       "date": "2024-10-05",
       "category": "Rapid Prototyping",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Compact hackathon designed for fast-paced innovation.",
       "status": "past",
       "links": [
@@ -134,7 +134,7 @@
       "type": "Workshop / Study Group",
       "date": "2024-10-05",
       "category": "Artificial Intelligence",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "AI-focused hands-on workshop.",
       "status": "past",
       "links": [
@@ -150,7 +150,7 @@
       "type": "Info Session",
       "date": "2024-09-14",
       "category": "Community Orientation",
-      "image": "/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
+      "image": "GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp",
       "description": "Introduction to club activities and expectations for the academic year.",
       "status": "past",
       "links": [
