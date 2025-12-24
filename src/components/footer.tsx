@@ -36,7 +36,7 @@ const footerData: FooterSection[] = [
     title: 'Team',
     underlineColor: 'bg-red-500', // Google Red
     links: [
-      { label: 'Our Team', href: 'https://example.com/core-team' },
+      { label: 'Our Team', href: '/team' },
     ],
   },
   {

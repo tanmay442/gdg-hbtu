@@ -11,7 +11,7 @@ const NavBar = () => {
             links: [
                 { label: "About Us", href: "#AboutSection", ariaLabel: "Go to About Section" },
                 { label: "Now", href: "#NowSection", ariaLabel: "Go to Now Section" },
-                { label: "Our Team", href: "https://example.com", target: "_blank", ariaLabel: "Meet the Team" }
+                { label: "Our Team", href: "/team", target: "_blank", ariaLabel: "Meet the Team" }
             ]
         },
         {
