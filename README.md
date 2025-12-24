@@ -167,10 +167,7 @@ This project is configured for deployment on Vercel with proper SPA routing hand
 ## 🙏 Acknowledgments
 
 Special thanks to:
-- **[Bits UI](https://bits-ui.com/)** for inspiring component architecture and design patterns
-- The React community for excellent libraries and tools
-- GDG India and Google for continued support
-- All contributors and team members
+- **[ReactBits](https://reactbits.dev/)** for inspiring component architecture and design patterns
 
 ## 📝 Important Notes
 
