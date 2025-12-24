@@ -5,7 +5,7 @@
             "name": "Someone",
             "role": "GDG Organizer",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         },
         {
@@ -13,7 +13,7 @@
             "name": "Someone",
             "role": "Tech Lead",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         },
         {
@@ -21,7 +21,7 @@
             "name": "Someone",
             "role": "Event Manager",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         },
         {
@@ -29,7 +29,7 @@
             "name": "Someone",
             "role": "Creative Lead",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         },
         {
@@ -37,7 +37,7 @@
             "name": "Someone",
             "role": "Web Dev Lead",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         },
         {
@@ -45,7 +45,7 @@
             "name": "Someone",
             "role": "Content Strategist",
             "handle": "@someone",
-            "image": "/public/default.png",
+            "image": "default.png",
             "link": "#"
         }
     ]

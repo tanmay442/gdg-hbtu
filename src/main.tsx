@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.tsx' // Your existing Home Page
-import EventsPage from './events.tsx' // The new Events Page
+import EventsPage from './pages/events.tsx' // The new Events Page
 import './index.css'
-import TeamPage from './Team.tsx'
+import TeamPage from './pages/Team.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

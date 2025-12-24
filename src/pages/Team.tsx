@@ -1,32 +1,50 @@
-import { useMemo } from 'react';
-import NavBar from './components/NavBar';
-import Footer from './components/footer';
-import Particles from './components/particleBackground/Particles';
-import ChromaGrid from './components/ChromaGrid/ChromaGrid';
-import eventsData from './data/eventdata.json';
-import { GOOGLE_COLORS } from './data/constants';
+import React, { useMemo } from 'react';
+import NavBar from '../components/NavBar';
+import Footer from '../components/footer';
+import Particles from '../components/particleBackground/Particles';
+import ChromaGrid from '../components/ChromaGrid/ChromaGrid';
+import teamData from '../data/team.json';
 
-const EventsPage = () => {
+interface TeamMember {
+    id: string;
+    name: string;
+    role: string;
+    handle: string;
+    image: string;
+    link: string;
+}
+
+interface ChromaGridItem {
+    image: string;
+    title: string;
+    subtitle: string;
+    handle: string;
+    borderColor: string;
+    gradient: string;
+    url: string;
+}
+
+const TeamPage: React.FC = () => {
 
     const googleColors = [
-        { border: GOOGLE_COLORS.blue, gradient: 'linear-gradient(145deg, #4285F4, #000)' },
-        { border: GOOGLE_COLORS.red, gradient: 'linear-gradient(145deg, #EA4335, #000)' },
-        { border: GOOGLE_COLORS.yellow, gradient: 'linear-gradient(145deg, #FBBC04, #000)' },
-        { border: GOOGLE_COLORS.green, gradient: 'linear-gradient(145deg, #34A853, #000)' },
+        { border: '#4285F4', gradient: 'linear-gradient(135deg, #4285F4 0%, #000000 85%)' },
+        { border: '#EA4335', gradient: 'linear-gradient(135deg, #EA4335 0%, #000000 85%)' },
+        { border: '#FBBC04', gradient: 'linear-gradient(135deg, #FBBC04 0%, #000000 85%)' },
+        { border: '#34A853', gradient: 'linear-gradient(135deg, #34A853 0%, #000000 85%)' },
     ];
 
-    const chromaItems = useMemo(() => {
-        return eventsData.events.map((evt, index) => {
+    const chromaItems: ChromaGridItem[] = useMemo(() => {
+        return (teamData.team as TeamMember[]).map((member, index) => {
             const theme = googleColors[index % googleColors.length];
 
             return {
-                image: evt.image,
-                title: evt.title,
-                subtitle: evt.type,
-                handle: `@${evt.date}`,
+                image: member.image,
+                title: member.name,
+                subtitle: member.role,
+                handle: member.handle,
                 borderColor: theme.border,
                 gradient: theme.gradient,
-                url: evt.links?.[0]?.href || '#',
+                url: member.link || '#',
             };
         });
     }, []);
@@ -43,6 +61,7 @@ const EventsPage = () => {
             }}
         >
 
+            {/* PARTICLES — HARD FIXED BEHIND */}
             <div
                 className="particles-layer"
                 style={{
@@ -54,7 +73,7 @@ const EventsPage = () => {
             >
                 <Particles
                     particleColors={['#ffffff']}
-                    particleCount={120}
+                    particleCount={80}
                     particleSpread={10}
                     speed={0.08}
                     particleBaseSize={90}
@@ -64,6 +83,7 @@ const EventsPage = () => {
                 />
             </div>
 
+            {/* MAIN CONTENT */}
             <div
                 className="main-content"
                 style={{
@@ -74,49 +94,39 @@ const EventsPage = () => {
             >
                 <NavBar />
 
+                {/* HEADER */}
                 <div
                     style={{
                         textAlign: 'center',
                         marginTop: '120px',
-                        marginBottom: '40px'
+                        marginBottom: '30px'
                     }}
                 >
-                    <h1
-                        style={{
-                            color: '#fff',
-                            fontSize: '3rem',
-                            fontWeight: 'bold',
-                            marginBottom: '10px'
-                        }}
-                    >
-                        Our Events
+                    <h1 style={{ color: '#fff', fontSize: '3rem', fontWeight: 'bold' }}>
+                        Meet the Team
                     </h1>
-
-                    <p
-                        style={{
-                            color: '#aaa',
-                            fontSize: '1.1rem'
-                        }}
-                    >
-                        Explore our past hackathons, workshops, and upcoming tech talks.
+                    <p style={{ color: '#aaa', fontSize: '1.1rem' }}>
+                        The minds behind GDG HBTU
                     </p>
                 </div>
 
+                {/* GRID */}
                 <div
                     style={{
-                        height: '1800px',
+                        height: '1600px',
                         width: '100%',
-                        maxWidth: '1250px',
+                        maxWidth: '1600px',
                         margin: '0 auto',
                         position: 'relative',
-                        isolation: 'isolate'
+                        isolation: 'isolate',
+                        overflow: 'hidden'
                     }}
                 >
                     <ChromaGrid
                         items={chromaItems}
-                        radius={500}
+                        radius={280}
                         damping={0.45}
-                        fadeOut={0.25}
+                        fadeOut={0.25}   // ✅ FIXED
                         ease="power3.out"
                     />
                 </div>
@@ -127,4 +137,4 @@ const EventsPage = () => {
     );
 };
 
-export default EventsPage;
+export default TeamPage;
