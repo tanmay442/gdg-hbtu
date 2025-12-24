@@ -56,7 +56,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
                 <Card>
                     <div style={cardStyle(colors.green, 'linear-gradient(135deg, #1e1e1e 0%, #0d1f12 100%)')}>
                         <div style={imageContainerStyle}>
-                            <img src="/src/assets/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp" alt="Workshops" style={imageStyle} />
+                            <img src="/public/GDG_Bevy_DefaultEventThumbnail_2_8AMTctc.webp" alt="Workshops" style={imageStyle} />
                         </div>
                         <div>
                             <h3 style={{ color: '#fff', margin: '0 0 5px 0', fontSize: '1.5rem' }}>Workshops</h3>
@@ -68,7 +68,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
                 <Card>
                     <div style={cardStyle(colors.red, 'linear-gradient(135deg, #1e1e1e 0%, #2a1010 100%)')}>
                         <div style={imageContainerStyle}>
-                            <img src="/src/assets/image.png" alt="Dev Fests" style={imageStyle} />
+                            <img src="/public/image.png" alt="Dev Fests" style={imageStyle} />
                         </div>
                         <div>
                             <h3 style={{ color: '#fff', margin: '0 0 5px 0', fontSize: '1.5rem' }}>Dev Fests</h3>
@@ -80,7 +80,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
                 <Card>
                     <div style={cardStyle(colors.blue, 'linear-gradient(135deg, #1e1e1e 0%, #10192a 100%)')}>
                         <div style={imageContainerStyle}>
-                            <img src="/src/assets/blob_qoNbrVn.webp" alt="Hackathons" style={imageStyle} />
+                            <img src="/public/blob_qoNbrVn.webp" alt="Hackathons" style={imageStyle} />
                         </div>
                         <div>
                             <h3 style={{ color: '#fff', margin: '0 0 5px 0', fontSize: '1.5rem' }}>Hackathons</h3>
