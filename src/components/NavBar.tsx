@@ -1,4 +1,3 @@
-import React from 'react';
 import CardNav from './CardNav/CardNav';
 import logo from '/public/logo.svg';
 

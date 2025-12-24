@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import NavBar from './components/NavBar';
 import Footer from './components/footer';
 import Particles from './components/particleBackground/Particles';

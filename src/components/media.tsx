@@ -1,4 +1,3 @@
-import React from 'react';
 import Masonry from './Masonry/Masonry';
 import { GOOGLE_COLORS } from '../data/constants';
 

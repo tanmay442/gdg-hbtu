@@ -1,4 +1,3 @@
-import React from 'react';
 import CountUp from './CountUp/CountUp';
 import GradientText from './GradientText/GradientText';
 import StarBorder from './StarBorder/StarBorder';
