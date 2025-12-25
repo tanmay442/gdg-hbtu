@@ -60,7 +60,7 @@ const TeamPage: React.FC = () => {
             }}
         >
 
-            {/* PARTICLES — HARD FIXED BEHIND */}
+            {/*partciltes*/}
             <div
                 className="particles-layer"
                 style={{
@@ -82,7 +82,7 @@ const TeamPage: React.FC = () => {
                 />
             </div>
 
-            {/* MAIN CONTENT */}
+            {/* main page */}
             <div
                 className="main-content"
                 style={{
@@ -93,7 +93,7 @@ const TeamPage: React.FC = () => {
             >
                 <NavBar />
 
-                {/* HEADER */}
+                {/* fancy line to say something */}
                 <div
                     style={{
                         textAlign: 'center',
@@ -110,30 +110,8 @@ const TeamPage: React.FC = () => {
                     </p>
                 </div>
 
-                {/* TEAM GRID */}
-                <div
-                    className="team-grid"
-                    style={{
-                        padding: '0 20px 40px 20px',
-                        maxWidth: '1200px',
-                        margin: '0 auto',
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                        gap: '24px'
-                    }}
-                >
-                    <style>{`
-                        @media (min-width: 769px) and (max-width: 1024px) {
-                            .team-grid {
-                                grid-template-columns: repeat(2, 1fr) !important;
-                            }
-                        }
-                        @media (min-width: 1025px) {
-                            .team-grid {
-                                grid-template-columns: repeat(3, 1fr) !important;
-                            }
-                        }
-                    `}</style>
+                {/* mainGridWithInfo */}
+                <div className="responsive-grid">
                     {chromaItems.map((item, index) => (
                         <a
                             key={index}

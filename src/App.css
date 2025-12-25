@@ -37,3 +37,28 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+.mobile-hidden {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+/* normal grid cause i cant figure out adjusting chroma grid parameters T-T */
+.responsive-grid {
+  padding: 0 20px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}

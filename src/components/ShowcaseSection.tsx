@@ -49,7 +49,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
 
     return (
         <div
-            className="showcase-section"
+            className="showcase-section mobile-hidden"
             style={{
                 flex: '1 1 400px',
                 height: '600px',
@@ -60,13 +60,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ colors }) => {
                 marginTop: '-100px'
             }}
         >
-            <style>{`
-                @media (max-width: 768px) {
-                    .showcase-section {
-                        display: none !important;
-                    }
-                }
-            `}</style>
+            
             <div style={{ position: 'absolute', width: '450px', height: '450px', background: `radial-gradient(circle, rgba(66, 133, 244, 0.12) 0%, rgba(0,0,0,0) 70%)`, borderRadius: '50%', zIndex: 0 }}></div>
 
             <CardSwap cardDistance={40} verticalDistance={60} delay={5000} pauseOnHover={true}>
