@@ -14,7 +14,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>
                 <GradientText
                     colors={[GOOGLE_COLORS.blue, GOOGLE_COLORS.red, GOOGLE_COLORS.yellow, GOOGLE_COLORS.green]}
-                    animationSpeed={3}>
+                    animationSpeed={10}>
                     Welcome Harcourtians
 
                 </GradientText>

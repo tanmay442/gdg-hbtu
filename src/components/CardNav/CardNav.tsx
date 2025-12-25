@@ -152,6 +152,14 @@ const CardNav: React.FC<CardNavProps> = ({
     }
   };
 
+  const closeMenu = () => {
+    const tl = tlRef.current;
+    if (!tl || !isExpanded) return;
+    setIsHamburgerOpen(false);
+    tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
+    tl.reverse();
+  };
+
   const setCardRef = (i: number) => (el: HTMLDivElement | null) => {
     if (el) cardsRef.current[i] = el;
   };
@@ -173,7 +181,7 @@ const CardNav: React.FC<CardNavProps> = ({
           </div>
 
           <div className="logo-container">
-            <a href="/" className="logo-link">
+            <a href="/" className="logo-link" onClick={closeMenu}>
               <img src={logo} alt={logoAlt} className="logo" />
             </a>
           </div>
@@ -182,7 +190,10 @@ const CardNav: React.FC<CardNavProps> = ({
             type="button"
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
-            onClick={() => window.location.href = 'https://gdg.community.dev/gdg-on-campus-harcourt-butler-technical-university-kanpur-india/'}
+            onClick={() => {
+              closeMenu();
+              window.location.href = 'https://gdg.community.dev/gdg-on-campus-harcourt-butler-technical-university-kanpur-india/';
+            }}
           >
             Get Started
           </button>
@@ -199,7 +210,7 @@ const CardNav: React.FC<CardNavProps> = ({
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
-                  <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
+                  <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel} onClick={closeMenu}>
                     <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
                     {lnk.label}
                   </a>
