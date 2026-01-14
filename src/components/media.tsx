@@ -3,13 +3,15 @@ import Masonry from './Masonry/Masonry';
 import { GOOGLE_COLORS } from '../data/constants';
 
 const items = [
-    { id: "1", img: "/download.png", url: "#", height: 280 },
-    { id: "2", img: "/download.png", url: "#", height: 180 },
-    { id: "3", img: "/download.png", url: "#", height: 350 },
-    { id: "4", img: "/download.png", url: "#", height: 300 },
-    { id: "5", img: "/download.png", url: "#", height: 250 },
-    { id: "6", img: "/download.png", url: "#", height: 320 },
-    { id: "7-link", img: "/download.png", url: "https://example.com", height: 120 },
+    { id: "1", img: "/media/1.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 280 },
+    { id: "2", img: "/media/2.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 180 },
+    { id: "3", img: "/media/3.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 180 },
+    { id: "4", img: "/media/4.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 270 },
+    { id: "5", img: "/media/5.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 150 },
+    { id: "6", img: "/media/6.jpeg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 320 },
+    { id: "7", img: "/media/7.jpeg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 220 },
+    { id: "8", img: "/media/8.jpg", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 320 },
+    { id: "9", img: "/media/9.webp", url: "https://drive.google.com/drive/folders/1vz4k7YgQVgBWBUWzepOWn48dt42bErm3", height: 280 },
 ];
 
 export function MediaSection() {

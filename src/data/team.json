@@ -2,49 +2,97 @@
     "team": [
         {
             "id": "t1",
-            "name": "Someone",
-            "role": "GDG Organizer",
-            "handle": "@someone",
-            "image": "default.png",
+            "name": "Prateek Srivastava",
+            "role": "GDGoC Organizer",
+            "handle": "@prateeksrivastava",
+            "image": "/team/prateek_srivastava.webp",
             "link": "#"
         },
         {
             "id": "t2",
-            "name": "Someone",
-            "role": "Tech Lead",
-            "handle": "@someone",
-            "image": "default.png",
+            "name": "Lakshya Baranwal",
+            "role": "CP & AI-ML Lead",
+            "handle": "@lakshyabaranwal",
+            "image": "/team/lakshya_baranwal.webp",
             "link": "#"
         },
         {
             "id": "t3",
-            "name": "Someone",
-            "role": "Event Manager",
-            "handle": "@someone",
-            "image": "default.png",
+            "name": "Dushyant Singh Kushwaha",
+            "role": "Event Management Lead",
+            "handle": "@dushyantkushwaha",
+            "image": "/team/dushyant.webp",
             "link": "#"
         },
         {
             "id": "t4",
-            "name": "Someone",
-            "role": "Creative Lead",
-            "handle": "@someone",
+            "name": "Naimish Kumar Pal",
+            "role": "Marketing and PR Lead",
+            "handle": "@naimishpal",
             "image": "default.png",
             "link": "#"
         },
         {
             "id": "t5",
-            "name": "Someone",
-            "role": "Web Dev Lead",
-            "handle": "@someone",
-            "image": "default.png",
+            "name": "Kedar Dixit",
+            "role": "Cyber Security & Embedded Systems Lead",
+            "handle": "@kedardixit",
+            "image": "/team/kedar_dixit.webp",
             "link": "#"
         },
         {
             "id": "t6",
-            "name": "Someone",
-            "role": "Content Strategist",
-            "handle": "@someone",
+            "name": "Akshat Awasthi",
+            "role": "CP Lead",
+            "handle": "@akshatawasthi",
+            "image": "default.png",
+            "link": "#"
+        },
+        {
+            "id": "t7",
+            "name": "Ansh Swaroop",
+            "role": "Volunteer",
+            "handle": "@anshswaroop",
+            "image": "/team/ansh_swarrop.webp",
+            "link": "#"
+        },
+        {
+            "id": "t8",
+            "name": "Avanshika Sahu",
+            "role": "Volunteer",
+            "handle": "@avanshikasahu",
+            "image": "/team/avanshika_sahu.webp",
+            "link": "#"
+        },
+        {
+            "id": "t9",
+            "name": "Aditya Kumar Singh",
+            "role": "Volunteer",
+            "handle": "@adityaksingh",
+            "image": "default.png",
+            "link": "#"
+        },
+        {
+            "id": "t10",
+            "name": "Aarav Bhatnagar",
+            "role": "Volunteer",
+            "handle": "@aaravbhatnagar",
+            "image": "default.png",
+            "link": "#"
+        },
+        {
+            "id": "t11",
+            "name": "Shivashish Mehrotra",
+            "role": "Volunteer",
+            "handle": "@shivashishmehrotra",
+            "image": "default.png",
+            "link": "#"
+        },
+        {
+            "id": "t12",
+            "name": "Naman Rajput",
+            "role": "Volunteer",
+            "handle": "@namanrajput",
             "image": "default.png",
             "link": "#"
         }

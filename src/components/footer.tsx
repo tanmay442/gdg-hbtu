@@ -44,6 +44,8 @@ const footerData: FooterSection[] = [
     underlineColor: 'bg-blue-500', // Google Blue
     links: [
       { label: 'LinkedIn', href: 'https://www.linkedin.com/company/gdghbtu/' },
+      { label: 'WhatsApp', href: 'https://chat.whatsapp.com/HZHxCeLi1pvAVwNT3lXjE5' },
+      { label: 'Instagram', href: 'https://www.instagram.com/gdg.hbtu' },
     ],
   },
 ];
@@ -101,7 +103,7 @@ const Footer: React.FC = () => {
           </p>
 
           <div className="flex space-x-4">
-            <SocialIcon href="https://www.linkedin.com/company/gdghbtu/" icon={<LinkedInIcon />} />
+            {/*<SocialIcon href="https://www.linkedin.com/company/gdghbtu/" icon={<LinkedInIcon />} />*/}
             <SocialIcon href="https://github.com/tanmay442/gdg-hbtu" icon={<GithubIcon />} />
           </div>
         </div>
