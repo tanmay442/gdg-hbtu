@@ -28,7 +28,7 @@ const NavBar = () => {
             textColor: "#000",
             links: [
                 { label: "LinkedIn", href: "https://www.linkedin.com/company/gdghbtu/", target: "_blank", ariaLabel: "LinkedIn" },
-                //{ label: "Instagram", href: "example.com", target: "_blank", ariaLabel: "Instagram" }
+                { label: "Instagram", href: "https://www.instagram.com//gdg.hbtu", target: "_blank", ariaLabel: "Instagram" }
             ]
         }
     ];
