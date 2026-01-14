@@ -10,6 +10,7 @@ import Footer from './components/footer';
 import { AboutSection } from './components/about';
 import { NowSection } from './components/now';
 import { MediaSection } from './components/media';
+import { Analytics } from "@vercel/analytics/next"
 
 const App = () => {
 
