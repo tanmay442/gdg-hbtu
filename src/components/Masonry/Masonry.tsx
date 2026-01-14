@@ -147,6 +147,8 @@ const Masonry: React.FC<MasonryProps> = ({
     return { grid: computedGrid, containerHeight: maxColHeight };
   }, [columns, items, width]);
 
+  const imagesReady = true;
+
   const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
@@ -190,7 +192,6 @@ const Masonry: React.FC<MasonryProps> = ({
     });
 
     hasMounted.current = true;
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
   }, [grid, stagger, animateFrom, blurToFocus, duration, ease]);
 
   const handleMouseEnter = (e: React.MouseEvent, item: GridItem) => {
