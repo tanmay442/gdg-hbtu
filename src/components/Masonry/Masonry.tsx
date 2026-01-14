@@ -34,18 +34,7 @@ const useMeasure = <T extends HTMLElement>() => {
   return [ref, size] as const;
 };
 
-const preloadImages = async (urls: string[]): Promise<void> => {
-  await Promise.all(
-    urls.map(
-      src =>
-        new Promise<void>(resolve => {
-          const img = new Image();
-          img.src = src;
-          img.onload = img.onerror = () => resolve();
-        })
-    )
-  );
-};
+// (preloading removed) images are lazy-loaded via <img loading="lazy"> in each item
 
 interface Item {
   id: string;
@@ -147,7 +136,7 @@ const Masonry: React.FC<MasonryProps> = ({
     return { grid: computedGrid, containerHeight: maxColHeight };
   }, [columns, items, width]);
 
-  const imagesReady = true;
+  // images are loaded lazily by the browser
 
   const hasMounted = useRef(false);
 
