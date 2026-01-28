@@ -1,6 +1,4 @@
 import CardNav from './CardNav/CardNav';
-import logo from '/public/logo.svg';
-
 const NavBar = () => {
     const navItems = [
         {
@@ -36,7 +34,7 @@ const NavBar = () => {
 
     return (
         <CardNav
-            logo={logo}
+            logo="/logo.svg"
             logoAlt="GDG HBTU Logo"
             items={navItems}
             baseColor="#807c7c54"

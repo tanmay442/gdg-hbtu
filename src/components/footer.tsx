@@ -103,8 +103,8 @@ const Footer: React.FC = () => {
           </p>
 
           <div className="flex space-x-4">
-            <SocialIcon href="https://www.linkedin.com/company/gdghbtu/" icon={<LinkedInIcon />} />
-            <SocialIcon href="https://github.com/tanmay442/gdg-hbtu" icon={<GithubIcon />} />
+            <SocialIcon href="https://www.linkedin.com/company/gdghbtu/" icon={<LinkedInIcon />} label="LinkedIn" />
+            <SocialIcon href="https://github.com/tanmay442/gdg-hbtu" icon={<GithubIcon />} label="Github" />
           </div>
         </div>
       </div>
@@ -114,9 +114,10 @@ const Footer: React.FC = () => {
 
 // --- Helper Components for Icons ---
 
-const SocialIcon = ({ href, icon }: { href: string; icon: React.ReactNode }) => (
+const SocialIcon = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
   <a
     href={href}
+    aria-label={label}
     className="bg-white/10 p-2 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center w-10 h-10"
   >
     {icon}
