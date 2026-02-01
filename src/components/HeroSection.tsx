@@ -11,7 +11,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
     return (
         <div style={{ flex: '1 1 500px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }} >
 
-            <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }} className='my-20'>
+            <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }} className='py-0 md:py-10'>
                 <GradientText
                     colors={[GOOGLE_COLORS.blue, GOOGLE_COLORS.red, GOOGLE_COLORS.yellow, GOOGLE_COLORS.green]}
                     animationSpeed={10}>
