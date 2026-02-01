@@ -1,3 +1,5 @@
+import type { NavItem } from './types';
+
 export const GOOGLE_COLORS = {
   blue: "#4285F4",
   red: "#EA4335",
@@ -6,37 +8,41 @@ export const GOOGLE_COLORS = {
   darkBg: "#050505"
 };
 
-export const NAV_ITEMS = [
+export const SECTION_IDS = {
+  HOME: "Home",
+  ABOUT: "AboutSection",
+  NOW: "NowSection",
+  MEDIA: "MediaSection",
+} as const;
+
+export const NAV_ITEMS: NavItem[] = [
   {
     label: "About",
-    bgColor: "#0D0716",
+    bgColor: "rgba(66, 133, 244, 0.9)",
     textColor: "#fff",
     links: [
-      { label: "Company", ariaLabel: "About Company" },
-      { label: "Careers", ariaLabel: "About Careers" }
+      { label: "About Us", href: `/#${SECTION_IDS.ABOUT}`, ariaLabel: "Go to About Section" },
+      { label: "Now", href: `/#${SECTION_IDS.NOW}`, ariaLabel: "Go to Now Section" },
+      { label: "Our Team", href: "/team", target: "_blank", ariaLabel: "Meet the Team" }
     ]
   },
   {
-    label: "Projects",
-    bgColor: "#170D27",
+    label: "Events",
+    bgColor: "rgba(234, 67, 53, 0.9)",
     textColor: "#fff",
     links: [
-      { label: "Featured", ariaLabel: "Featured Projects" },
-      { label: "Case Studies", ariaLabel: "Project Case Studies" }
+      { label: "All Events", href: "/events", target: "_blank", ariaLabel: "GDG HBTU" },
+      { label: "Media & Gallery", href: `/#${SECTION_IDS.MEDIA}`, ariaLabel: "View Events" }
     ]
   },
   {
     label: "Contact",
-    bgColor: "#271E37",
-    textColor: "#fff",
+    bgColor: "rgba(251, 188, 4, 0.9)",
+    textColor: "#000",
     links: [
-      { label: "Email", ariaLabel: "Email us" },
-      { label: "Twitter", ariaLabel: "Twitter" },
-      { label: "LinkedIn", ariaLabel: "LinkedIn" },
-      { label: 'Home', href: '#Home' },
-      { label: 'About', href: '#AboutSection' },
-      { label: 'Now', href: '#NowSection' },
-      { label: 'Media', href: '#MediaSection' },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/gdghbtu/", target: "_blank", ariaLabel: "LinkedIn" },
+      { label: "Instagram", href: "https://www.instagram.com/gdg.hbtu", target: "_blank", ariaLabel: "Instagram" },
+      { label: "WhatsApp", href: "https://chat.whatsapp.com/HZHxCeLi1pvAVwNT3lXjE5", target: "_blank", ariaLabel: "WhatsApp" }
     ]
   }
 ];

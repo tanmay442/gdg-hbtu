@@ -1,3 +1,17 @@
+export interface NavLink {
+  label: string;
+  href: string;
+  target?: string;
+  ariaLabel: string;
+}
+
+export interface NavItem {
+  label: string;
+  bgColor: string;
+  textColor: string;
+  links: NavLink[];
+}
+
 export interface Link {
   label: string;
   href: string;

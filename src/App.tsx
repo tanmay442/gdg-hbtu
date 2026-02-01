@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import ShowcaseSection from './components/ShowcaseSection';
 import Particles from './components/particleBackground/Particles';
-import { GOOGLE_COLORS } from './data/constants';
+import { GOOGLE_COLORS, SECTION_IDS } from './data/constants';
 import Footer from './components/footer';
 
 import { AboutSection } from './components/about';
@@ -51,24 +51,24 @@ const App = () => {
 
         <NavBar />
 
-        <div id="Home" className="hero-layout">
+        <div id={SECTION_IDS.HOME} className="hero-layout">
           <HeroSection colors={GOOGLE_COLORS} />
           <ShowcaseSection colors={GOOGLE_COLORS} />
         </div>
 
       
 
-        <div id="AboutSection" className="py-0 md:py-10" >
+        <div id={SECTION_IDS.ABOUT} className="py-0 md:py-10" >
           <AboutSection />
         </div>
 
 
-        <div id="NowSection">
+        <div id={SECTION_IDS.NOW}>
           <NowSection />
         </div>
 
 
-        <div id="MediaSection"  >
+        <div id={SECTION_IDS.MEDIA}  >
           <MediaSection />
         </div>
 
