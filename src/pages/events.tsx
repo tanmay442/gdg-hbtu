@@ -4,7 +4,8 @@ import Footer from '../components/footer';
 import Particles from '../components/particleBackground/Particles';
 import ChromaGrid from '../components/ChromaGrid/ChromaGrid';
 import eventsData from '../data/eventdata.json';
-import { GOOGLE_COLORS } from '../data/constants';
+import { getGoogleTheme, debounce } from '../lib/utils';
+import type { ChromaGridItem, GDGEvent } from '../data/types';
 
 const EventsPage = () => {
     const [isDesktop, setIsDesktop] = useState(false);
@@ -12,20 +13,15 @@ const EventsPage = () => {
     useEffect(() => {
         const checkDesktop = () => setIsDesktop(window.innerWidth >= 1025);
         checkDesktop();
-        window.addEventListener('resize', checkDesktop);
-        return () => window.removeEventListener('resize', checkDesktop);
+        
+        const debouncedCheck = debounce(checkDesktop, 150);
+        window.addEventListener('resize', debouncedCheck);
+        return () => window.removeEventListener('resize', debouncedCheck);
     }, []);
 
-    const googleColors = [
-        { border: GOOGLE_COLORS.blue, gradient: 'linear-gradient(145deg, #4285F4, #000)' },
-        { border: GOOGLE_COLORS.red, gradient: 'linear-gradient(145deg, #EA4335, #000)' },
-        { border: GOOGLE_COLORS.yellow, gradient: 'linear-gradient(145deg, #FBBC04, #000)' },
-        { border: GOOGLE_COLORS.green, gradient: 'linear-gradient(145deg, #34A853, #000)' },
-    ];
-
-    const chromaItems = useMemo(() =>
-        eventsData.events.map((evt, index) => {
-            const theme = googleColors[index % googleColors.length];
+    const chromaItems: ChromaGridItem[] = useMemo(() =>
+        (eventsData.events as unknown as GDGEvent[]).map((evt, index) => {
+            const theme = getGoogleTheme(index);
             return {
                 image: evt.image,
                 title: evt.title,
@@ -170,7 +166,7 @@ const EventsPage = () => {
                                 style={{ textDecoration: 'none' }}
                             >
                                 <div
-                                    style={styles.card(item.gradient, item.borderColor)}
+                                    style={styles.card(item.gradient || '', item.borderColor || 'transparent')}
                                     onMouseEnter={(e) => handleCardHover(e, -4)}
                                     onMouseLeave={(e) => handleCardHover(e, 0)}
                                 >

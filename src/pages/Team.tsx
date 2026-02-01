@@ -3,38 +3,14 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/footer';
 import Particles from '../components/particleBackground/Particles';
 import teamData from '../data/team.json';
-
-interface TeamMember {
-    id: string;
-    name: string;
-    role: string;
-    handle: string;
-    image: string;
-    link: string;
-}
-
-interface ChromaGridItem {
-    image: string;
-    title: string;
-    subtitle: string;
-    handle: string;
-    borderColor: string;
-    gradient: string;
-    url: string;
-}
+import { getGoogleTheme } from '../lib/utils';
+import type { TeamMember, ChromaGridItem } from '../data/types';
 
 const TeamPage: React.FC = () => {
 
-    const googleColors = [
-        { border: '#4285F4', gradient: 'linear-gradient(135deg, #4285F4 0%, #000000 85%)' },
-        { border: '#EA4335', gradient: 'linear-gradient(135deg, #EA4335 0%, #000000 85%)' },
-        { border: '#FBBC04', gradient: 'linear-gradient(135deg, #FBBC04 0%, #000000 85%)' },
-        { border: '#34A853', gradient: 'linear-gradient(135deg, #34A853 0%, #000000 85%)' },
-    ];
-
     const chromaItems: ChromaGridItem[] = useMemo(() => {
         return (teamData.team as TeamMember[]).map((member, index) => {
-            const theme = googleColors[index % googleColors.length];
+            const theme = getGoogleTheme(index);
 
             return {
                 image: member.image,
@@ -49,27 +25,9 @@ const TeamPage: React.FC = () => {
     }, []);
 
     return (
-        <div
-            className="app-container"
-            style={{
-                minHeight: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                position: 'relative',
-                background: '#000'
-            }}
-        >
-
-            {/*partciltes*/}
-            <div
-                className="particles-layer"
-                style={{
-                    position: 'fixed',
-                    inset: 0,
-                    zIndex: 0,
-                    pointerEvents: 'none'
-                }}
-            >
+        <div className="min-h-screen flex flex-col relative bg-black overflow-x-hidden">
+            {/* particles */}
+            <div className="fixed inset-0 z-0 pointer-events-none">
                 <Particles
                     particleColors={['#ffffff']}
                     particleCount={80}
@@ -83,98 +41,55 @@ const TeamPage: React.FC = () => {
             </div>
 
             {/* main page */}
-            <div
-                className="main-content"
-                style={{
-                    flex: 1,
-                    zIndex: 2,
-                    position: 'relative'
-                }}
-            >
+            <div className="flex-1 z-10 relative">
                 <NavBar />
 
                 {/* fancy line to say something */}
-                <div
-                    style={{
-                        textAlign: 'center',
-                        marginTop: '120px',
-                        marginBottom: '40px',
-                        padding: '0 20px'
-                    }}
-                >
-                    <h1 style={{ color: '#fff', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 'bold' }}>
+                <div className="text-center mt-32 mb-10 px-5">
+                    <h1 className="text-white text-[clamp(2rem,5vw,3rem)] font-bold">
                         Meet the Team
                     </h1>
-                    <p style={{ color: '#aaa', fontSize: 'clamp(0.9rem, 2vw, 1.1rem)' }}>
+                    <p className="text-[#aaa] text-[clamp(0.9rem,2vw,1.1rem)]">
                         The minds behind GDG HBTU
                     </p>
                 </div>
 
                 {/* mainGridWithInfo */}
-                <div className="responsive-grid">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto px-5 pb-10">
                     {chromaItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ textDecoration: 'none' }}
+                            className="no-underline block h-full"
                         >
-                            <div style={{
-                                background: item.gradient,
-                                border: `2px solid ${item.borderColor}`,
-                                borderRadius: '16px',
-                                padding: '24px',
-                                transition: 'transform 0.3s ease',
-                                cursor: 'pointer',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                textAlign: 'center',
-                                height: '100%'
-                            }}
-                                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-                                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                            <div
+                                className="h-full rounded-2xl p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out cursor-pointer hover:-translate-y-1"
+                                style={{
+                                    background: item.gradient,
+                                    border: `2px solid ${item.borderColor}`,
+                                }}
                             >
-                                <div style={{
-                                    width: '120px',
-                                    height: '120px',
-                                    marginBottom: '16px',
-                                    borderRadius: '50%',
-                                    overflow: 'hidden',
-                                    background: '#1a1a1a',
-                                    border: `3px solid ${item.borderColor}`
-                                }}>
+                                <div
+                                    className="w-[120px] h-[120px] mb-4 rounded-full overflow-hidden bg-[#1a1a1a]"
+                                    style={{
+                                        border: `3px solid ${item.borderColor}`
+                                    }}
+                                >
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover'
-                                        }}
+                                        className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <h3 style={{
-                                    color: '#fff',
-                                    fontSize: '1.25rem',
-                                    fontWeight: 'bold',
-                                    margin: '0 0 8px 0'
-                                }}>
+                                <h3 className="text-white text-xl font-bold mb-2">
                                     {item.title}
                                 </h3>
-                                <p style={{
-                                    color: '#aaa',
-                                    fontSize: '0.9rem',
-                                    margin: '0 0 4px 0'
-                                }}>
+                                <p className="text-[#aaa] text-sm mb-1">
                                     {item.subtitle}
                                 </p>
-                                <p style={{
-                                    color: '#666',
-                                    fontSize: '0.85rem',
-                                    margin: 0
-                                }}>
+                                <p className="text-[#666] text-xs m-0">
                                     {item.handle}
                                 </p>
                             </div>

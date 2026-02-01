@@ -9,9 +9,9 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
     return (
-        <div style={{ flex: '1 1 500px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+        <div style={{ flex: '1 1 500px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }} >
 
-            <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>
+            <div style={{ fontSize: '1.75rem', marginBottom: '1rem' }} className='my-20'>
                 <GradientText
                     colors={[GOOGLE_COLORS.blue, GOOGLE_COLORS.red, GOOGLE_COLORS.yellow, GOOGLE_COLORS.green]}
                     animationSpeed={10}>
@@ -29,8 +29,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 <span style={{ color: GOOGLE_COLORS.blue, marginLeft: '5px', marginRight: '15px' }}>&gt;</span>
                 <span style={{ color: '#fff' }}>On Campus HBTU</span>
             </div>
-
-            <h1 style={{ fontSize: '2.5rem', fontWeight: '600', lineHeight: '1.2', marginBottom: '1.5rem', color: '#e0e0e0' }}>
+            
+            <h1 style={{ fontSize: '2.5rem', fontWeight: '600', lineHeight: '1.2', marginBottom: '1.5rem', color: '#e0e0e0' }} >
                 Join us to learn, grow and connect with technical minds and unleash your talent.
             </h1>
 
@@ -40,7 +40,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 background: `linear-gradient(90deg, ${GOOGLE_COLORS.blue} 25%, ${GOOGLE_COLORS.red} 25%, ${GOOGLE_COLORS.red} 50%, ${GOOGLE_COLORS.yellow} 50%, ${GOOGLE_COLORS.yellow} 75%, ${GOOGLE_COLORS.green} 75%)`,
                 marginBottom: '2rem',
                 borderRadius: '4px'
-            }}></div>
+            }} ></div>
 
             <p style={{ fontSize: '1.1rem', color: '#aaa', marginBottom: '2.5rem', maxWidth: '600px', lineHeight: '1.6' }}>
                 A student chapter of Google Developer Groups on Campus,

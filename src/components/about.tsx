@@ -10,9 +10,9 @@ export function AboutSection() {
             <div className="orbiting-circles-container mobile-hidden relative flex h-[500px] w-full flex-col items-center justify-center md:w-1/2 scale-90 md:scale-100">
 
                 <div className="pointer-events-none absolute z-10 select-none flex items-center justify-center">
-                    <span className="text-8xl font-black text-white/5 tracking-tighter">GDG</span>
+                    <span className="text-8xl font-black text-white/20 tracking-tighter">GDG</span>
                 </div>
-                <OrbitingCircles iconSize={50} radius={190} speed={1.5}>
+                <OrbitingCircles iconSize={50} radius={210} speed={1.33}>
                     <SiPytorch className="size-full text-[#EA4335]" />
                     <SiGooglecloud className="size-full text-[#4285F4]" />
                     <FaShieldVirus className="size-full text-[#FBBC04]" />

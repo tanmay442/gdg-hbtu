@@ -13,18 +13,22 @@ import { MediaSection } from './components/media';
 import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
-
   useEffect(() => {
-    const { hash } = window.location;
-
-    if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      if (hash) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         }, 100);
       }
-    }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   return (
@@ -52,15 +56,19 @@ const App = () => {
           <ShowcaseSection colors={GOOGLE_COLORS} />
         </div>
 
-        <div id="AboutSection">
+      
+
+        <div id="AboutSection" className="py-0 md:py-10" >
           <AboutSection />
         </div>
+
 
         <div id="NowSection">
           <NowSection />
         </div>
 
-        <div id="MediaSection">
+
+        <div id="MediaSection"  >
           <MediaSection />
         </div>
 
