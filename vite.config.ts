@@ -10,6 +10,6 @@ export default defineConfig({
     sitemap({
       hostname: 'https://gdghbtu.vercel.app',
       dynamicRoutes: ['/events', '/Team'],
-    } as any),
+    }),
   ],
 })

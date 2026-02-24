@@ -64,7 +64,7 @@ const CardNav: React.FC<CardNavProps> = ({
         contentEl.style.position = 'static';
         contentEl.style.height = 'auto';
 
-        contentEl.offsetHeight;
+        void contentEl.offsetHeight;
 
         const topBar = 60;
         const padding = 16;
@@ -81,7 +81,7 @@ const CardNav: React.FC<CardNavProps> = ({
     return 260;
   };
 
-  const createTimeline = () => {
+  const createTimeline = React.useCallback(() => {
     const navEl = navRef.current;
     if (!navEl) return null;
 
@@ -99,7 +99,7 @@ const CardNav: React.FC<CardNavProps> = ({
     tl.to(cardsRef.current, { y: 0, opacity: 1, duration: 0.4, ease, stagger: 0.08 }, '-=0.1');
 
     return tl;
-  };
+  }, [calculateHeight, ease]);
 
   useLayoutEffect(() => {
     const tl = createTimeline();
@@ -109,7 +109,7 @@ const CardNav: React.FC<CardNavProps> = ({
       tl?.kill();
       tlRef.current = null;
     };
-  }, [ease, items]);
+  }, [createTimeline, ease, items]);
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -136,7 +136,7 @@ const CardNav: React.FC<CardNavProps> = ({
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isExpanded]);
+  }, [createTimeline, isExpanded]);
 
   const toggleMenu = () => {
     const tl = tlRef.current;
