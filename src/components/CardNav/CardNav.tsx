@@ -46,7 +46,7 @@ const CardNav: React.FC<CardNavProps> = ({
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
 
-  const calculateHeight = () => {
+  const calculateHeight = React.useCallback(() => {
     const navEl = navRef.current;
     if (!navEl) return 260;
 
@@ -79,7 +79,7 @@ const CardNav: React.FC<CardNavProps> = ({
       }
     }
     return 260;
-  };
+  }, []);
 
   const createTimeline = React.useCallback(() => {
     const navEl = navRef.current;
@@ -136,7 +136,7 @@ const CardNav: React.FC<CardNavProps> = ({
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [createTimeline, isExpanded]);
+  }, [calculateHeight, createTimeline, isExpanded]);
 
   const toggleMenu = () => {
     const tl = tlRef.current;

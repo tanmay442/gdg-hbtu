@@ -1,10 +1,10 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 import './Masonry.css';
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
-  const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
+  const get = useCallback(() => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue, [queries, values, defaultValue]);
 
   const [value, setValue] = useState<number>(get);
 
@@ -82,7 +82,7 @@ const Masonry: React.FC<MasonryProps> = ({
   const [containerRef, { width }] = useMeasure<HTMLDivElement>();
   
 
-  const getInitialPosition = (item: GridItem) => {
+  const getInitialPosition = useCallback((item: GridItem) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
     if (!containerRect) return { x: item.x, y: item.y };
 
@@ -110,7 +110,7 @@ const Masonry: React.FC<MasonryProps> = ({
       default:
         return { x: item.x, y: item.y + 100 };
     }
-  };
+  }, [animateFrom, containerRef]);
 
   // images will be lazy-loaded via <img loading="lazy"> inside each item
 
