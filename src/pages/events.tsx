@@ -6,9 +6,17 @@ import ChromaGrid from '../components/ChromaGrid/ChromaGrid';
 import eventsData from '../data/eventdata.json';
 import { getGoogleTheme, debounce } from '../lib/utils';
 import type { ChromaGridItem, GDGEvent } from '../data/types';
+import { useSEOMetadata } from '../hooks/useSEOMetadata';
 
 const EventsPage = () => {
     const [isDesktop, setIsDesktop] = useState(false);
+
+    useSEOMetadata({
+        title: 'GDG HBTU Events | Google Developer Group HBTU',
+        description:
+            'Explore GDG HBTU events, workshops, hackathons, and tech talks by the Google Developer Group HBTU community at Harcourt Butler Technical University.',
+        canonical: 'https://gdghbtu.vercel.app/events',
+    });
 
     useEffect(() => {
         const checkDesktop = () => setIsDesktop(window.innerWidth >= 1025);

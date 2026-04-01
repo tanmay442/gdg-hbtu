@@ -5,8 +5,15 @@ import Particles from '../components/particleBackground/Particles';
 import teamData from '../data/team.json';
 import { getGoogleTheme } from '../lib/utils';
 import type { TeamMember, ChromaGridItem } from '../data/types';
+import { useSEOMetadata } from '../hooks/useSEOMetadata';
 
 const TeamPage: React.FC = () => {
+    useSEOMetadata({
+        title: 'GDG HBTU Team | Google Developer Group HBTU',
+        description:
+            'Meet the GDG HBTU team behind Google Developer Group HBTU initiatives at Harcourt Butler Technical University, Kanpur.',
+        canonical: 'https://gdghbtu.vercel.app/team',
+    });
 
     const chromaItems: ChromaGridItem[] = useMemo(() => {
         return (teamData.team as TeamMember[]).map((member, index) => {
