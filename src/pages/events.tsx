@@ -6,30 +6,17 @@ import ChromaGrid from '../components/ChromaGrid/ChromaGrid';
 import eventsData from '../data/eventdata.json';
 import { getGoogleTheme, debounce } from '../lib/utils';
 import type { ChromaGridItem, GDGEvent } from '../data/types';
+import { useSEOMetadata } from '../hooks/useSEOMetadata';
 
 const EventsPage = () => {
     const [isDesktop, setIsDesktop] = useState(false);
 
-    useEffect(() => {
-        document.title = 'GDG HBTU Events | Google Developer Group HBTU';
-        const description =
-            'Explore GDG HBTU events, workshops, hackathons, and tech talks by the Google Developer Group HBTU community at Harcourt Butler Technical University.';
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', description);
-
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            canonical = document.createElement('link');
-            canonical.setAttribute('rel', 'canonical');
-            document.head.appendChild(canonical);
-        }
-        canonical.setAttribute('href', 'https://gdghbtu.vercel.app/events');
-    }, []);
+    useSEOMetadata({
+        title: 'GDG HBTU Events | Google Developer Group HBTU',
+        description:
+            'Explore GDG HBTU events, workshops, hackathons, and tech talks by the Google Developer Group HBTU community at Harcourt Butler Technical University.',
+        canonical: 'https://gdghbtu.vercel.app/events',
+    });
 
     useEffect(() => {
         const checkDesktop = () => setIsDesktop(window.innerWidth >= 1025);
