@@ -14,6 +14,27 @@ import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   useEffect(() => {
+    document.title = 'GDG HBTU | Google Developer Group HBTU';
+    const description =
+      'GDG HBTU is the Google Developer Group HBTU community at Harcourt Butler Technical University, Kanpur. Learn, build, and connect through tech events and workshops.';
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://gdghbtu.vercel.app/');
+  }, []);
+
+  useEffect(() => {
     const handleHashChange = () => {
       const { hash } = window.location;
       if (hash) {

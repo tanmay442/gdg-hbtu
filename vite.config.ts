@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     sitemap({
       hostname: 'https://gdghbtu.vercel.app',
-      dynamicRoutes: ['/events', '/Team'],
+      dynamicRoutes: ['/events', '/team'],
     }),
   ],
 })

@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/footer';
 import Particles from '../components/particleBackground/Particles';
@@ -7,6 +8,26 @@ import { getGoogleTheme } from '../lib/utils';
 import type { TeamMember, ChromaGridItem } from '../data/types';
 
 const TeamPage: React.FC = () => {
+    useEffect(() => {
+        document.title = 'GDG HBTU Team | Google Developer Group HBTU';
+        const description =
+            'Meet the GDG HBTU team behind Google Developer Group HBTU initiatives at Harcourt Butler Technical University, Kanpur.';
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.setAttribute('name', 'description');
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute('content', description);
+
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonical);
+        }
+        canonical.setAttribute('href', 'https://gdghbtu.vercel.app/team');
+    }, []);
 
     const chromaItems: ChromaGridItem[] = useMemo(() => {
         return (teamData.team as TeamMember[]).map((member, index) => {
