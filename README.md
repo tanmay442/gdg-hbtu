@@ -1,6 +1,6 @@
 # GDG on Campus HBTU - Official Website
 
-A modern, interactive website for the Google Developer Groups (GDG) on Campus chapter at Harcourt Butler Technical University (HBTU), Kanpur. Built with a "bleeding edge" stack to showcase events, team members, and community activities.
+A modern, interactive website for the Google Developer Groups (GDG) on Campus chapter at Harcourt Butler Technical University (HBTU), Kanpur.
 
 ## 🚀 Overview
 
